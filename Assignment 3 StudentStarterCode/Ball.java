@@ -6,8 +6,8 @@ public class Ball extends Sprite {
 	
 	// Constructor
 	public Ball() {
-		width = Settings.BALL_WIDTH;// SASHA??? TODO: Set width to Settings.BALL_WIDTH
-		height = Settings.BALL_HEIGHT; //SASHA??? TODO: Set width to Settings.BALL_HEIGHT
+		this.width = Settings.BALL_WIDTH;// SASHA??? TODO: Set width to Settings.BALL_WIDTH
+		this.height = Settings.BALL_HEIGHT; //SASHA??? TODO: Set width to Settings.BALL_HEIGHT
 		resetPosition();// SASHA TODO: Call resetPosition
 		
 	}

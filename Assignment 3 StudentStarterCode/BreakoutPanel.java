@@ -51,16 +51,16 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	}
 	
 	private void paintBricks(Graphics g) {
-		for(int i = 0; i < bricks.length; i++) {
+		for(int i = 0; i < bricks.length; i++) {     // SASHA??? TODO: Loop through the bricks and call the paint() method
 			bricks[i].paint(g);
 		}
 	}
-		// SASHA??? TODO: Loop through the bricks and call the paint() method
+		
 	
 	
 	private void update() {
 		if(gameRunning) {
-			ball.update();;// SASHA??? TODO: Update the ball and paddle
+			ball.update(); // SASHA??? TODO: Update the ball and paddle
 			paddle.update(); // SASHA???
 			collisions();
 			repaint();

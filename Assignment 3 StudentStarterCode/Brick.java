@@ -5,8 +5,8 @@ public class Brick extends Sprite {
 	private boolean broken = false;
 	
 	public Brick(int x, int y) {
-		this.x = x;// ???????? TODO: Set x using the parameter
-		this.y = y;// ????????? TODO: Set y using the parameter
+		this.x = x;// SASHA ???????? TODO: Set x using the parameter
+		this.y = y;// SASHA ????????? TODO: Set y using the parameter
 		this.width = Settings.BRICK_WIDTH;
 		this.height = Settings.BRICK_HEIGHT;// SASHA? TODO: Set the width and height of the brick using Settings.BRICK_WIDTH/HEIGHT
 	}
