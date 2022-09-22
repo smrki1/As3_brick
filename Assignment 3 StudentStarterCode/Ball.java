@@ -33,14 +33,15 @@ public class Ball extends Sprite {
 		
 		// Bounce off right side of screen
 		if(x >= Settings.WINDOW_WIDTH - Settings.BALL_WIDTH) {
-			// TODO: Set x to the right edge of the screen (see the above if condition)
-			// TODO: Change the x velocity to make the ball go left
+			x = Settings.WINDOW_WIDTH - Settings.BALL_WIDTH; // SASHA?? Set x to the right edge of the screen (see the above if condition)
+			xVelocity = -1; // SASHA?? TODO: Change the x velocity to make the ball go left
+			
 		}
 		
 		// Bounce off top of screen
 		if(y <= 0) {
 			y = 0; // SASHA TODO: Set y to 0 so it does not leave the screen
-			y = y - 1; // SASHA?? TODO: Change the y velocity to make the ball go downward
+			yVelocity = -1; // SASHA?? TODO: Change the y velocity to make the ball go downward
 			
 		}
 		
