@@ -168,12 +168,28 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO: Set the velocity of the paddle depending on whether the player is pressing left or right
+		// SASHA TODO: Set the velocity of the paddle depending on whether the player is pressing left or right
+int key = e.getKeyCode();
+		
+		if(key == KeyEvent.VK_LEFT) {
+			paddle.setXVelocity(-1);
+		}
+		if(key == KeyEvent.VK_RIGHT) {
+			paddle.setXVelocity(1);
+		}
+
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO: Set the velocity of the paddle after the player has released the keys
+		// SASHA TODO: Set the velocity of the paddle after the player has released the keys
+		int key = e.getKeyCode();
+		if(key == KeyEvent.VK_LEFT) {
+			paddle.setXVelocity(0);
+		}
+		if(key == KeyEvent.VK_RIGHT) {
+			paddle.setXVelocity(0);
+		}
 	}
 
 	@Override
