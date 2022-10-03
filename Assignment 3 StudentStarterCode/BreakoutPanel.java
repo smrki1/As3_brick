@@ -156,7 +156,7 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
         paintBricks(g);
         String lives_left_screenMessage="You have " + livesLeft + "" + " lives left";
 		if(lives_left_screenMessage != null) {
-        	g.setFont(new Font("Arial", Font.BOLD, 18));
+        	g.setFont(new Font("Arial", Font.BOLD, 12));
         	int messageWidth = g.getFontMetrics().stringWidth(lives_left_screenMessage);
         	g.drawString(lives_left_screenMessage, (Settings.WINDOW_WIDTH /3) - (messageWidth / 2), Settings.LIVES_POSITION_Y);
         }
