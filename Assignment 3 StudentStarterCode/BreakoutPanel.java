@@ -51,7 +51,7 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	}
 	
 	private void paintBricks(Graphics g) {
-		for(int i = 0; i < bricks.length; i++) {     // SASHA??? TODO: Loop through the bricks and call the paint() method
+		for(int i = 0; i < bricks.length; i++) {     // SASHA TODO: Loop through the bricks and call the paint() method
 			bricks[i].paint(g);
 		}
 	}
@@ -60,8 +60,8 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
 	
 	private void update() {
 		if(gameRunning) {
-			ball.update(); // SASHA??? TODO: Update the ball and paddle
-			paddle.update(); // SASHA???
+			ball.update(); // SASHA TODO: Update the ball and paddle
+			paddle.update(); // SASHA
 			collisions();
 			repaint();
 		}
@@ -154,7 +154,13 @@ public class BreakoutPanel extends JPanel implements ActionListener, KeyListener
         ball.paint(g);
         paddle.paint(g);
         paintBricks(g);
-        
+        String lives_left_screenMessage="You have " + livesLeft + "" + " lives left";
+		if(lives_left_screenMessage != null) {
+        	g.setFont(new Font("Arial", Font.BOLD, 18));
+        	int messageWidth = g.getFontMetrics().stringWidth(lives_left_screenMessage);
+        	g.drawString(lives_left_screenMessage, (Settings.WINDOW_WIDTH /3) - (messageWidth / 2), Settings.LIVES_POSITION_Y);
+        }
+
         // Draw lives left
         // TODO: Draw lives left in the top left hand corner
         

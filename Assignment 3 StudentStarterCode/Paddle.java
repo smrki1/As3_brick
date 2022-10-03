@@ -18,8 +18,14 @@ public class Paddle extends Sprite {
 	
 	public void update() {
 		x += xVelocity;
-		
-		// TODO: Prevent the paddle from moving outside of the screen
+		if(x <= 0) {
+			x = 0;
+		}
+		if(x >= 280) {
+			x = 280;
+		}
+
+		// SASHA TODO: Prevent the paddle from moving outside of the screen
 		// This can be done using two if statements (one for the left side of the screen and one for the right)
 
 	}
